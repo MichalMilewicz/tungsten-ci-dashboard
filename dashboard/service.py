@@ -22,12 +22,14 @@ def fetch_json_data(endpoint):
 def pipelines_stats(pipelines):
     pipeline_stats = []
     for pipeline in pipelines:
-        buildsets_count = 0
-        for queue in pipeline['change_queues']:
-            if len(queue['heads']):
-                buildsets_count += len(queue['heads'][0])
-        pipeline_stats.append(PipelineStat(
-            name=pipeline['name'], buildsets_count=buildsets_count))
+        if pipeline['name'] in config['zuul']['pipelines']:
+            buildsets_count = 0
+            for queue in pipeline['change_queues']:
+                heads = queue.get('heads')
+                if heads:
+                    buildsets_count += len(heads[0])
+            pipeline_stats.append(PipelineStat(name=pipeline['name'],
+                                               buildsets_count=buildsets_count))
     return pipeline_stats
 
 
@@ -56,5 +58,5 @@ def drop_user_session():
 def fetch_user_data(token):
     # TODO (pawelzny): Fetch data from OpenID
     return User(full_name='Admin Admin',  # noqa
-                email='admin@acid.test',
+                email='admin@acid.com',
                 token=token)

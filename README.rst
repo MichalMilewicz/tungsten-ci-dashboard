@@ -1,25 +1,18 @@
-
 TUNGSTEN DASHBOARD
 ==================
 
-Tungsten Dashboard is open source client interface with dashboard for Tungsten Fabric.
-More information about Tungsten Fabric You can find:
+Awesome CI Dashboard is open source client interface for Zuul Gating system
 
-https://github.com/tungstenfabric/website
+More information about Zuul Gating system you can find at
+
+https://zuul-ci.org/docs/zuul/
 
 Project actual status is development stage, work only in development environment
 
-Tungesten Dasboard use APACHE LICENSE, for more info check LICENSE
+Tungesten Dasboard use APACHE 2.0 LICENSE, for more info check LICENSE
 
 HOW TO INSTALL
 --------------
-
-Add repo:
-
-.. code::
-
-   sudo add-apt-repository ppa:deadsnakes/ppa
-   sudo apt-get update
 
 Install/check installation of python 3.6/venv:
 
@@ -56,53 +49,28 @@ For develop purpose set db in docker:
 
    docker run --name zuul_db -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d mariadb:latest
    mysql -u root -pmysqlpass < zuul.sql
+   make install-dev
 
-File **zuul.sql** You should find in project repo
 
-Deactivate venv:
 
-.. code::
-
-   deactivate
-
-HOW TO DEPLOY IN DEVELOPMENT ENV
+RUN Awesome CI Dashboard
 --------------------------------
 
-Enter to Tungsten Dashboard directory
 
-.. code::
+.. code:: console
 
-   cd [dir_with_file]
+    $ source .venv/bin/activate
+    $ make serve
 
-Activate venv:
+Server will listen on http://127.0.0.1:3000/
 
-.. code::
-
-   source ./venv/bin/activate
-   `
-
-Run
-
-.. code::
-
-   make serve
-
-**You will get application working on localhost:3000
-Debugger in on**
-
-HOW TO RUN TEST
+RUN TESTS
 ---------------
 
 Enter to Tungsten Dashboard directory
 
-.. code::
+.. code:: console
 
-   cd [dir_with_file]
+    $ source .venv/bin/activate
+    $ make test && make lint
 
-Run tests
-
-.. code::
-
-   make test
-
-**All tests You can find in /tests**

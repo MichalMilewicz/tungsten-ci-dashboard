@@ -14,7 +14,7 @@ Custom dashboard for Zuul
 GETTING STARTED
 ===============
 
-.. mdinclude:: ../README.md
+.. include:: ../README.rst
 
 =======
 LICENSE

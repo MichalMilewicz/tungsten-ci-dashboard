@@ -1,7 +1,7 @@
-TUNGSTEN DASHBOARD
-==================
+AWESOME CI DASHBOARD (ACID)
+===========================
 
-Awesome CI Dashboard is open source client interface for Zuul Gating system
+Awesome CI Dashboard is open source user client interface for Zuul Gating system
 
 More information about Zuul Gating system you can find at
 
@@ -9,18 +9,16 @@ https://zuul-ci.org/docs/zuul/
 
 Project actual status is development stage, work only in development environment
 
-Tungesten Dasboard use APACHE 2.0 LICENSE, for more info check LICENSE
+Tungesten Dasboard uses APACHE 2.0 LICENSE, for more info check LICENSE
 
 HOW TO INSTALL
 --------------
 
-Install/check installation of python 3.6/venv:
+ACID require Python 3.6.x. and Python3.6-venv  Please make sure you have Python 3.6 and Python 3.6 version in your OS.
+If not install it before running project.
 
-.. code:: console
 
-   $ sudo apt install python3.6 python3.6-venv
-
-Set venv with dependencies for project:
+Create new virtual environment for ACID project, unless you don't care about PIP packages collision.
 
 .. code:: console
 
@@ -36,8 +34,8 @@ Run vagrant for remote services like Zuul and Gerrit for development purposes.
     $ make dev-run
 
 
-RUN Awesome CI Dashboard
---------------------------------
+Run ACID
+--------
 
 
 .. code:: console
@@ -48,7 +46,7 @@ RUN Awesome CI Dashboard
 Server will listen on http://127.0.0.1:3000/
 
 RUN TESTS
----------------
+---------
 
 Enter to Tungsten Dashboard directory
 

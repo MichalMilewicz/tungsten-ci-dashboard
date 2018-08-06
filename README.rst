@@ -16,41 +16,24 @@ HOW TO INSTALL
 
 Install/check installation of python 3.6/venv:
 
-.. code::
+.. code:: console
 
-   sudo apt-get install python3.6
-   sudo apt install python3.6-venv
-
-Install/check installation of Docker:
-
-.. code::
-
-   sudo apt-get install docker.io
-
-Clone project repo from github:
-
-.. code::
-
-   git clone git@github.com:tungstenfabric/tungsten-ci-dashboard.git
-   cd tungsten-ci-dashboard/
+   $ sudo apt install python3.6 python3.6-venv
 
 Set venv with dependencies for project:
 
-.. code::
+.. code:: console
 
-   python3.6 -m venv .venv
-   source .venv/bin/activate
-   pip install setuptools wheel
-   make install-dev
+   $ python3.6 -m venv .venv
+   $ source .venv/bin/activate
+   $ pip install setuptools wheel
+   $ make install-dev
 
-For develop purpose set db in docker:
+Run vagrant for remote services like Zuul and Gerrit for development purposes.
 
-.. code::
+.. code:: console
 
-   docker run --name zuul_db -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d mariadb:latest
-   mysql -u root -pmysqlpass < zuul.sql
-   make install-dev
-
+    $ make dev-run
 
 
 RUN Awesome CI Dashboard

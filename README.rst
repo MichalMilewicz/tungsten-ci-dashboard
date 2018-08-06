@@ -9,7 +9,7 @@ https://zuul-ci.org/docs/zuul/
 
 Project actual status is development stage, work only in development environment
 
-Tungesten Dasboard uses APACHE 2.0 LICENSE, for more info check LICENSE
+Awesome CI Dashboard uses APACHE 2.0 LICENSE, for more info check LICENSE
 
 HOW TO INSTALL
 --------------

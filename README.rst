@@ -1,15 +1,15 @@
 AWESOME CI DASHBOARD (ACID)
 ===========================
 
-Awesome CI Dashboard is open source user client interface for Zuul Gating system
+Awesome CI Dashboard is an open source user interface for Zuul Gating system.
 
-More information about Zuul Gating system you can find at
+More information about Zuul Gating system you can find at:
 
 https://zuul-ci.org/docs/zuul/
 
-Project actual status is development stage, work only in development environment
+Project is currently in development stage and only works in a development environment.
 
-Awesome CI Dashboard uses APACHE 2.0 LICENSE, for more info check LICENSE
+Awesome CI Dashboard uses APACHE 2.0 LICENSE, for more info check LICENSE.
 
 HOW TO INSTALL
 --------------
@@ -48,7 +48,7 @@ Server will listen on http://127.0.0.1:3000/
 RUN TESTS
 ---------
 
-Enter to Tungsten Dashboard directory
+Enter ACID directory
 
 .. code:: console
 
